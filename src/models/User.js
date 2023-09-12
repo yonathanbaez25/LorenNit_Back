@@ -12,6 +12,7 @@ const UserSchema = new mongoose.Schema(
     emai: {
       type: String,
       required: true,
+      min: 3,
       max: 20,
       unique: true,
     },
