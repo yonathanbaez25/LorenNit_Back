@@ -7,6 +7,7 @@ const morgan = require("morgan");
 
 const usersRoute = require("./routes/users");
 const authRouter = require("./routes/auth");
+const postRouter = require("./routes/posts");
 
 dotenv.config();
 
@@ -17,5 +18,6 @@ app.use(morgan("common"));
 
 app.use("/api/users", usersRoute);
 app.use("/api/auth", authRouter);
+app.use("/api/posts", postRouter);
 
 module.exports = app;
